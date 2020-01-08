@@ -1,6 +1,6 @@
-##ID
+##ID 1
 ##What this script does : Useful when trying to obtain flanking regions to create miRNA precursors from BLAST hits across a genome (miRNA hits with genome as reference).
-
+##Credit the code appropriately.
 ##What you need : Your BLAST results along with the appropriate (start and end) query + subject coordinates of every match.
 ##Your reference genome in a fasta format.
 ##A file containing the accessions of the matches in a tabular form. (A file containing accessions, seperated by a new-line).
@@ -9,6 +9,11 @@
 ##Flanking sequence from the BLAST hits across the genome.
 ##Yashrajsinh Jadeja 8th Jan 2020
 #TODO: Fine-tune according to the pipeline.
+
+## Yashrajsinh-Jadeja/Thesis-MS is licensed under the
+##GNU General Public License v3.0
+##Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license.
+##Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
 
 from Bio import SeqIO
 from Bio.Seq import Seq
@@ -46,6 +51,6 @@ print("*" * 13)
 print("All done!")
 print("*" * 13)
 print("\n")
-print(f"The number of precursors generated are {ctr}.")
-print(f"The last of precursor's gene ID was {x} and it's number was {ctr}.")
+print(f"The number of precursors generated is {ctr}.")
+print(f"The last precursor's gene ID was {x} and it's number was {ctr}.")
 print(f"The last start coordinate was : {start[ctr-1]} and end coordinate was {end[ctr-1]}")

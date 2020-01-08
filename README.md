@@ -3,7 +3,7 @@
 ---
 ### Table of Contents
 
-1. [What is this about and will it suit my workflow?](#what-is-this-about-and-will-it-suit-my-workflow?)
+1. [What is this about and will it suit my workflow?](#what-is-this-about-and-will-it-suit-my-workflow)
 2. [Prerequisites](#prerequisites)
 3. [Instructions](#instructions)
 ---

@@ -10,7 +10,7 @@
 #### What is this about and will it suit my workflow?
  This is a script that sort of automates the process of fetching BLAST hits along with their flanking region for creating precursor microRNA sequences. 
 
-Furthermore, it will fold the precursor sequences into secondary RNA structures and allow the users to highlight the bases to their own liking. (intended for highlighting miRNA and miRNA* in the 2^o^ structure.
+Furthermore, it will fold the precursor sequences into secondary RNA structures and allow the users to highlight the bases to their own liking. (intended for highlighting miRNA and miRNA* in the 2<sup>o</sup> structure.
 
 This script can be a workaround for batch-processing highlighting mfold structures as the standalone mfold does not have a highlight feature similar to it's web-server.   
 

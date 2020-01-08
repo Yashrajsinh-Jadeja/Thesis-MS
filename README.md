@@ -3,9 +3,9 @@
 ---
 ### Table of Contents
 
-1. [What is this about and will it suit my workflow?](####What-is-this-about-and-will-it-suit-my-workflow?)
-2. [Prerequisites](####Prerequisites)
-3. [Instructions](####Instructions)
+1. [What is this about and will it suit my workflow?](#what-is-this-about-and-will-it-suit-my-workflow?)
+2. [Prerequisites](#prerequisites)
+3. [Instructions](#instructions)
 ---
 #### What is this about and will it suit my workflow?
  This is a script that sort of automates the process of fetching BLAST hits along with their flanking region for creating precursor microRNA sequences. 

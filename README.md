@@ -38,7 +38,7 @@ This script can be a workaround for batch-processing highlighting mfold structur
 7. Grab a coffee because this is going to take a while.
 ---
 ##### TLDR
-###### _(What goes in)_ 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file 
+###### _(What goes in)_ 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file.
 ###### _(What comes out)_ ".fasta" files containing precursors.   
 
 

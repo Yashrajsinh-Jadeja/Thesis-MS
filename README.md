@@ -14,7 +14,7 @@ Furthermore, it will fold the precursor sequences into secondary RNA structures 
 
 This script can be a workaround for batch-processing highlighting mfold structures as the standalone mfold does not have a highlight feature similar to it's web-server.   
 
-*Note : This workflow has been designed for short microRNA sequences. If you wish to use this script to fetch other nucleotide sequences just for the flanking regions, you most certainly can.* 
+> *Note : This workflow has been designed for short microRNA sequences. If you wish to use this script to fetch other nucleotide sequences just for the flanking regions, you most certainly can.* 
 
 ---
 #### Prerequisites
@@ -36,4 +36,10 @@ This script can be a workaround for batch-processing highlighting mfold structur
 `python3 flanking_updated.py`
 6. Set the appropriate flank length for your sequences.
 7. Grab a coffee because this is going to take a while.
+---
+##### TLDR
+###### _(What goes in)_ 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file 
+###### _(What comes out)_ ".fasta" files containing precursors.   
+
+
 > Written with [StackEdit](https://stackedit.io/).

@@ -37,12 +37,12 @@ This script can be a workaround for batch-processing highlighting mfold structur
 6. Set the appropriate flank length for your sequences.
 7. Grab a coffee because this is going to take a while.
 ---
-##### TLDR
+#### TLDR
 ###### _(What goes in)_ 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file.
 ###### _(What comes out)_ ".fasta" files containing precursors.  
 
 ### TODO
-**Learn to write better documentation, update the terrible documentation, tweak the code for better performance, fix terrible variable names.
+**Learn to write better documentation, update the terrible documentation, tweak the code for better performance, fix terrible variable names.**
 
 
 > Written with [StackEdit](https://stackedit.io/).

@@ -29,7 +29,7 @@ This script can be a workaround for batch-processing highlighting mfold structur
 ---
 #### Instructions
 1. Take a deep breath.
-2. After installing the appropriate prerequisites, move the "**flanking_updated.py**" Python script to your work folder.
+2. After installing the appropriate prerequisites, move the "**flanking_updated_vx.py**" Python script to your work folder.
 3. Create **3 files separately** with each containing your **sequence accession** (subject or reference), **start coordinates** and **end coordinates** respectively from your BLAST results spreadsheet/table.
 4. Name the files accordingly as mentioned in the script. (Note: Files as command line parameters will be added soon)
 5. Run the script with 
@@ -39,7 +39,10 @@ This script can be a workaround for batch-processing highlighting mfold structur
 ---
 ##### TLDR
 ###### _(What goes in)_ 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file.
-###### _(What comes out)_ ".fasta" files containing precursors.   
+###### _(What comes out)_ ".fasta" files containing precursors.  
+
+### TODO
+**Learn to write better documentation, update the terrible documentation, tweak the code for better performance, fix terrible variable names.
 
 
 > Written with [StackEdit](https://stackedit.io/).

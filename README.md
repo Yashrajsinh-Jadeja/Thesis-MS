@@ -21,7 +21,7 @@ This script can be a workaround for batch-processing highlighting mfold structur
 
 1. A Linux system.
 2. Python version 3.x.x.
-3. [BioPython package.](https://biopython.org/wiki/Download) (preferably v. 1.76)
+3. [pyfaidx](https://pythonhosted.org/pyfaidx/#installation)
 4. BLAST results.
 5. [mfold/UNAFOLD.](http://unafold.rna.albany.edu/?q=mfold/download-mfold) (preferably v. 3.6)
 6. [VARNA.](http://varna.lri.fr/index.php?lang=en&page=downloads&css=varna) (Visualization Applet for RNA)

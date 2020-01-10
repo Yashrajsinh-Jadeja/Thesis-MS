@@ -26,6 +26,9 @@ This script can be a workaround for batch-processing highlighting mfold structur
 5. [mfold/UNAFOLD.](http://unafold.rna.albany.edu/?q=mfold/download-mfold) (preferably v. 3.6)
 6. [VARNA.](http://varna.lri.fr/index.php?lang=en&page=downloads&css=varna) (Visualization Applet for RNA)
 7. Tons of patience and a lot of sleep.
+
+> Note : This program has been tested on Ubuntu 16.x and 18.04 with 64-bit architecture. You __will__ need to install the 'pyfaidx' package for Python 3 and **not** Python 2. 
+
 ---
 #### Instructions
 1. Take a deep breath.

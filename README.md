@@ -1,3 +1,4 @@
+
 # Thesis-MS
 ### A repository for some scripts and tools that I wrote during my M.S thesis/dissertation work in the genomics domain.
 ---
@@ -27,18 +28,29 @@ This script can be a workaround for batch-processing highlighting mfold structur
 6. [VARNA.](http://varna.lri.fr/index.php?lang=en&page=downloads&css=varna) (Visualization Applet for RNA)
 7. Tons of patience and a lot of sleep.
 
-> Note : This program has been tested on Ubuntu 16.x and 18.04 with 64-bit architecture. You __will__ need to install the 'pyfaidx' package for Python 3 and **not** Python 2. 
+> *Note : This program has been tested on Ubuntu 16.x and 18.04 with 64-bit architecture. You __will__ need to install the 'pyfaidx' package for Python 3 and **not** Python 2.* 
 
 ---
 #### Instructions
 1. Take a deep breath.
+
 2. After installing the appropriate prerequisites, move the "**flanking_updated_vx.py**" Python script to your work folder.
+
 3. Create **3 files separately** with each containing your **sequence accession** (subject or reference), **start coordinates** and **end coordinates** respectively from your BLAST results spreadsheet/table.
+
 4. Name the files accordingly as mentioned in the script. (Note: Files as command line parameters will be added soon)
+> **The file containing the Gene Accession list from the BLAST results (Subject/Genome) has to be named 'gene.txt'.**
+
+> **The file containing the Start Coordinates list from the BLAST results (Subject/Genome) has to be named 'start.txt'.** 
+
+>**The file containing the End Coordinates list from the BLAST results (Subject/Genome) has to be named 'end.txt'.** 
+
+>*(if you have errors with the naming due to Windows/Linux encoding/line-ending you can name the file according to your own choice and change the filename from the code)*  
+
 5. Run the script with 
-`python3 flanking_updated.py`
+`python3 flanking_updated_v2.py`
 6. Set the appropriate flank length for your sequences.
-7. Grab a coffee because this is going to take a while.
+7. *Don't* grab a coffee because this is *not* going to take a while. It's rather quick.
 ---
 #### TLDR
 ###### _(What goes in)_ 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file.

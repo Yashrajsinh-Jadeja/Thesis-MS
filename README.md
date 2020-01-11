@@ -52,12 +52,12 @@ This script can be a workaround for batch-processing highlighting mfold structur
 6. Set the appropriate flank length for your sequences.
 7. *Don't* grab a coffee because this is *not* going to take a while. It's rather quick.
 ---
-#### TLDR
-##### **(What goes in)** 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file.
+##### TLDR
+> **(What goes in)** 3 files containing gene accessions, start coordinates and end coordinates respectively and a ".fasta" reference file.
 
-###### **(What comes out)** _Multiple_ ".fasta" files containing precursors (as mfold does NOT allow multi-fasta files) + file containing motif start coordinates + file containing motif end coordinates. (relevant for further folding and highlighting.)
+> **(What comes out)** _Multiple_ ".fasta" files containing precursors (as mfold does NOT allow multi-fasta files) + file containing motif start coordinates + file containing motif end coordinates. (relevant for further folding and highlighting.)
 
-### TODO
+#### TODO
 **Learn to write better documentation, update the terrible documentation, tweak the code for better performance, fix terrible variable names.**
 
 

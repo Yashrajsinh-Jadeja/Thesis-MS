@@ -46,7 +46,7 @@ for x in accessions:
     mot_strt.write(f"{str(flank)}\n")
     mot_end.write(f"{str(flank+len(motif))}\n")
     #motif_end = motif_start + len(motif)
-    file=open(f"pni_yj_precursor_recordnum_{ctr+1}.fasta","w")
+    file=open(f"prec{ctr+1}.fasta","w")
     file.write(f">pni_yj_precursor_recordnum_{ctr+1}_coord_{start[ctr]}:{end[ctr]}\n")
     file.write(seq)
     file.close()

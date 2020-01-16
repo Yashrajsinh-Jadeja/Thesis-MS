@@ -20,10 +20,10 @@ for x in open("motif_end"):
 
 #os.system("echo why; shopt -s extglob")
 for x in range(1,choice+1):
-	os.system(f'mfold SEQ"=seq{x}.fasta"')
+	os.system(f'mfold SEQ"=prec{x}.fasta"')
 	os.system("bash remover.sh")
 	#os.system('rm -v !(*.py|*.fasta|*coord|*.ct|*.EPS|*.jar')
-	os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i seq{x}_4.ct -o seq{x}.EPS -highlightRegion "{start[x]}-{end[x]}:fill=#FF0000"')
+	os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i prec{x}_4.ct -o prec{x}.EPS -highlightRegion "{start[x]}-{end[x]}:fill=#FF0000"')
 
 print("*" * 13)
 print("All Done!")

@@ -62,7 +62,7 @@ _Now that we have a gazillion ".fasta" files, we will process them for fold and 
 
 3. Now move the VARNAx.jar applet binary to the folder.
 
-4. Execute the script using `python3 fold_and_highlight.py`.
+4. Execute the script using `python3 fold_and_highlight_v2.py`.
 
 5. This is **definitely** going to take a while. Go grab that coffee.
 ---

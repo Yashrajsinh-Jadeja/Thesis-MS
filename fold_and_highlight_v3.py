@@ -39,11 +39,11 @@ for x in range(choicex,choice+1):
 				if flag == 1:
 					file.write(seq)
 			file.close()
-			os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i new_prec{x}.ct -o prec{x}.EPS -highlightRegion "{start[x]}-{end[x]}:fill=#FF0000"') ##Command to highlight the ".ct" extension files according to the miRNA motif start/end coordinates.
+			os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i new_prec{x}.ct -o prec{x}.EPS -highlightRegion "{int(start[x-1])+1}-{end[x-1]}:fill=#FF0000"') ##Command to highlight the ".ct" extension files according to the miRNA motif start/end coordinates.
 		except:
 			err_log.write(f"Corrupt CT : prec{x}.fasta")
 			os.system(f"bash err_ct.sh prec{x}.ct new_prec{x}.ct new_prec{x}")
-			os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i new_prec{x}.ct -o prec{x}.EPS -highlightRegion "{start[x]}-{end[x]}:fill=#FF0000"')				
+			os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i new_prec{x}.ct -o prec{x}.EPS -highlightRegion "{int(start[x-1])+1}-{end[x-1]}:fill=#FF0000"')				
 	else:
 		err_log.write(f"mfold ERROR: prec{x}.fasta")
 

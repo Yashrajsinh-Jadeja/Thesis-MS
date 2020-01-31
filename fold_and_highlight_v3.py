@@ -8,6 +8,41 @@
 ## 12 January 2020 Yashrajsinh Jadeja
 
 import os
+
+def welcome():
+	print("          _____                    _____                    _____                    _____                    _____                    _____            _____          ")
+	print("         /\    \                  /\    \                  /\    \                  /\    \                  /\    \                  /\    \          /\    \         ")
+	print("        /::\____\                /::\    \                /::\    \                /::\    \                /::\    \                /::\____\        /::\    \        ")
+	print("       /::::|   |                \:::\    \              /::::\    \              /::::\    \              /::::\    \              /:::/    /       /::::\    \       ")
+	print("      /:::::|   |                 \:::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /:::/    /       /::::::\    \      ")
+	print("     /::::::|   |                  \:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/    /       /:::/\:::\    \     ")
+	print("    /:::/|::|   |                   \:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \        /:::/    /       /:::/__\:::\    \    ")
+	print("   /:::/ |::|   |                   /::::\    \      /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \      /:::/    /       /::::\   \:::\    \   ")
+	print("  /:::/  |::|___|______    ____    /::::::\    \    /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \    /:::/    /       /::::::\   \:::\    \  ")
+	print(" /:::/   |::::::::\    \  /\   \  /:::/\:::\    \  /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /:::/    /   \:::\    \  /:::/    /       /:::/\:::\   \:::\    \ ")
+	print("/:::/    |:::::::::\____\/::\   \/:::/  \:::\____\/:::/  \:::\   \:::|    |/:::/  \:::\   \:::\____\/:::/____/     \:::\____\/:::/____/       /:::/__\:::\   \:::\____\ ",end="")
+	print("\::/    / ~~~~~/:::/    /\:::\  /:::/    \::/    /\::/   |::::\  /:::|____|\::/    \:::\  /:::/    /\:::\    \      \::/    /\:::\    \       \:::\   \:::\   \::/    / ",end="")
+	print(" \/____/      /:::/    /  \:::\/:::/    / \/____/  \/____|:::::\/:::/    /  \/____/ \:::\/:::/    /  \:::\    \      \/____/  \:::\    \       \:::\   \:::\   \/____/ ")
+	print("             /:::/    /    \::::::/    /                 |:::::::::/    /            \::::::/    /    \:::\    \               \:::\    \       \:::\   \:::\    \     ")
+	print("            /:::/    /      \::::/____/                  |::|\::::/    /              \::::/    /      \:::\    \               \:::\    \       \:::\   \:::\____\    ")
+	print("           /:::/    /        \:::\    \                  |::| \::/____/               /:::/    /        \:::\    \               \:::\    \       \:::\   \::/    /    ")
+	print("          /:::/    /          \:::\    \                 |::|  ~|                    /:::/    /          \:::\    \               \:::\    \       \:::\   \/____/     ")
+	print("         /:::/    /            \:::\    \                |::|   |                   /:::/    /            \:::\    \               \:::\    \       \:::\    \         ")
+	print("        /:::/    /              \:::\____\               \::|   |                  /:::/    /              \:::\____\               \:::\____\       \:::\____\        ")
+	print("        \::/    /                \::/    /                \:|   |                  \::/    /                \::/    /                \::/    /        \::/    /        ")
+	print("         \/____/                  \/____/                  \|___|                   \/____/                  \/____/                  \/____/          \/____/         ")
+	print("\n\nAUTHOR: Yashrajsinh Jadeja ")
+	print("\nGitHub: github.com/Yashrajsinh-Jadeja/")
+	print("\nEmail: yashrajjadeja97@gmail.com")
+	print("\nYashrajsinh-Jadeja/Thesis-MS is licensed under the GNU General Public License v3.0. ")
+	print("Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license.")
+	print("Copyright and license notices must be preserved.")
+	print("Contributors provide an express grant of patent rights.")
+	print("\n(c) miRacle fold_and_highlight_v3\n\n")
+	return
+
+welcome()
+
 choice = int(input("Enter the total number of files to be processed."))  ##User input for the number of files to be processed.
 choicex = int(input("Enter the number from which you wish to continue. (if you wish to start from the beginning enter 1) "))
 
@@ -43,11 +78,15 @@ for x in range(choicex,choice+1):
 		except:
 			err_log.write(f"Corrupt CT : prec{x}.fasta")
 			os.system(f"bash err_ct.sh prec{x}.ct new_prec{x}.ct new_prec{x}")
-			os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i new_prec{x}.ct -o prec{x}.EPS -highlightRegion "{int(start[x-1])+1}-{end[x-1]}:fill=#FF0000"')				
+			os.system(f'java -cp VARNAv3-93.jar fr.orsay.lri.varna.applications.VARNAcmd -i new_prec{x}.ct -o prec{x}.EPS -highlightRegion "{int(start[x-1])+1}-{end[x-1]}:fill=#FF0000"')
 	else:
 		err_log.write(f"mfold ERROR: prec{x}.fasta")
+		print("An error has occured. Check 'errorlog.txt' to see the erroneous file.")
 
 err_log.close()
-print("*" * 13)
-print("All Done!")
-print("*" * 13)
+print("*" * 30)
+print("All Done! (Hopefully)")
+print(f"The last file to be processed was prec{x}.fasta")
+print("The total number of .EPS files generated : ")
+os.system("ls *.EPS | wc -l")
+print("*" * 30)

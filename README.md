@@ -1,5 +1,5 @@
 
-# Thesis-MS
+# miRacle
 ### A repository for some scripts and tools that I wrote during my M.S thesis/dissertation work in the genomics domain.
 ---
 ### Table of Contents

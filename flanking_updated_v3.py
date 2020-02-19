@@ -23,59 +23,29 @@ def err():
     print("\nIf this still didn't work, create an issue request on 'www.github.com/Yashrajsinh-Jadeja/' or just contact me via Twitter '@omnomgenome' or email: 'yashrajjadeja97@gmail.com' ")
     return
 
-def welcome():
-    print("          _____                    _____                    _____                    _____                    _____                    _____            _____          ")
-    print("         /\    \                  /\    \                  /\    \                  /\    \                  /\    \                  /\    \          /\    \         ")
-    print("        /::\____\                /::\    \                /::\    \                /::\    \                /::\    \                /::\____\        /::\    \        ")
-    print("       /::::|   |                \:::\    \              /::::\    \              /::::\    \              /::::\    \              /:::/    /       /::::\    \       ")
-    print("      /:::::|   |                 \:::\    \            /::::::\    \            /::::::\    \            /::::::\    \            /:::/    /       /::::::\    \      ")
-    print("     /::::::|   |                  \:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/\:::\    \          /:::/    /       /:::/\:::\    \     ")
-    print("    /:::/|::|   |                   \:::\    \        /:::/__\:::\    \        /:::/__\:::\    \        /:::/  \:::\    \        /:::/    /       /:::/__\:::\    \    ")
-    print("   /:::/ |::|   |                   /::::\    \      /::::\   \:::\    \      /::::\   \:::\    \      /:::/    \:::\    \      /:::/    /       /::::\   \:::\    \   ")
-    print("  /:::/  |::|___|______    ____    /::::::\    \    /::::::\   \:::\    \    /::::::\   \:::\    \    /:::/    / \:::\    \    /:::/    /       /::::::\   \:::\    \  ")
-    print(" /:::/   |::::::::\    \  /\   \  /:::/\:::\    \  /:::/\:::\   \:::\____\  /:::/\:::\   \:::\    \  /:::/    /   \:::\    \  /:::/    /       /:::/\:::\   \:::\    \ ")
-    print("/:::/    |:::::::::\____\/::\   \/:::/  \:::\____\/:::/  \:::\   \:::|    |/:::/  \:::\   \:::\____\/:::/____/     \:::\____\/:::/____/       /:::/__\:::\   \:::\____\ ",end="")
-    print("\::/    / ~~~~~/:::/    /\:::\  /:::/    \::/    /\::/   |::::\  /:::|____|\::/    \:::\  /:::/    /\:::\    \      \::/    /\:::\    \       \:::\   \:::\   \::/    / ",end="")
-    print(" \/____/      /:::/    /  \:::\/:::/    / \/____/  \/____|:::::\/:::/    /  \/____/ \:::\/:::/    /  \:::\    \      \/____/  \:::\    \       \:::\   \:::\   \/____/ ")
-    print("             /:::/    /    \::::::/    /                 |:::::::::/    /            \::::::/    /    \:::\    \               \:::\    \       \:::\   \:::\    \     ")
-    print("            /:::/    /      \::::/____/                  |::|\::::/    /              \::::/    /      \:::\    \               \:::\    \       \:::\   \:::\____\    ")
-    print("           /:::/    /        \:::\    \                  |::| \::/____/               /:::/    /        \:::\    \               \:::\    \       \:::\   \::/    /    ")
-    print("          /:::/    /          \:::\    \                 |::|  ~|                    /:::/    /          \:::\    \               \:::\    \       \:::\   \/____/     ")
-    print("         /:::/    /            \:::\    \                |::|   |                   /:::/    /            \:::\    \               \:::\    \       \:::\    \         ")
-    print("        /:::/    /              \:::\____\               \::|   |                  /:::/    /              \:::\____\               \:::\____\       \:::\____\        ")
-    print("        \::/    /                \::/    /                \:|   |                  \::/    /                \::/    /                \::/    /        \::/    /        ")
-    print("         \/____/                  \/____/                  \|___|                   \/____/                  \/____/                  \/____/          \/____/         ")
-    print("\n\nAUTHOR: Yashrajsinh Jadeja ")
-    print("\nGitHub: github.com/Yashrajsinh-Jadeja/")
-    print("\nEmail: yashrajjadeja97@gmail.com")
-    print("\nYashrajsinh-Jadeja/Thesis-MS is licensed under the GNU General Public License v3.0. ")
-    print("Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license.")
-    print("Copyright and license notices must be preserved.")
-    print("Contributors provide an express grant of patent rights.")
-    print("\n(c) miRacle flanking_updated_v3")
-    print("\nThis program will generate precursors '.fasta' sequences accordingly as per the chosen flank length.")
-    print("\nThe '.fasta' will look something like:")
-    print("\n >ACCESSION")
-    print(" LEFT FLANK SEQUENCE + MOTIF(the BLAST hit) + RIGHT FLANK SEQUENCE")
-    print("\nNOTE: Individual '.fasta' files will be generated and not a multifasta because mfold does not accept multifasta format.\n")
-    return
-
 from pyfaidx import Fasta
+from welcome import welcome_flank,welcome
 record_index = Fasta("sequence.fasta")
 accessions = [] ##Declaring lists.
 start = []
 end = []
 ctr = 0
 
+from os import path
 welcome()
+welcome_flank()
 
-for x in open("gene.txt"):
+if not (path.isfile("gene") and path.isfile("start") and path.isfile("end")):
+    print("\n**ERROR: Files missing. Check if 'gene', 'start' and 'end' files are present in this directory.**\n")
+    exit()
+
+for x in open("gene"):
     accessions.append(x.replace("\n","")) ##Fetching accessions from the file.
 
-for x in open("start.txt"):
+for x in open("start"):
     start.append(int(x.replace("\n",""))) ##Fetching start coordinates from the file.
 
-for x in open("end.txt"):
+for x in open("end"):
     end.append(int(x.replace("\n",""))) ##Fetching end coordinates from the file.
 
 flank = int(input("\n\nEnter the flank length : ")) ##Input flank length for precursors.

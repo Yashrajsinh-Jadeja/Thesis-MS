@@ -1,6 +1,8 @@
 
 # miRacle
 ### A repository for some scripts and tools that I wrote during my M.S thesis/dissertation work in the genomics domain.
+#### **EDIT : CNN-based image classifier for further automation coming soon with substantially large pre-trained Keras model (trained on 5 plant datasets) along with the source code.  
+
 ---
 ### Table of Contents
 
